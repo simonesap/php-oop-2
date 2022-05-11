@@ -55,17 +55,54 @@ $gatto = new Prodotti_Medicinali('Prodotti Alimentari',
                                  'Spray antipulci',
                                  'Shampoo neutro');
 
-echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
-echo "<p>" . $cane -> cane . "</p>";
-echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-echo "<p>" . $prodotti -> shampooNeutro . "</p>";
-echo "<p>" . $gatto -> gatto . "</p>";
-echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+// echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
+// echo "<p>" . $cane -> cane . "</p>";
+// echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+// echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+// echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+// echo "<p>" . $gatto -> gatto . "</p>";
+// echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+// echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+// echo "<p>" . $prodotti -> shampooNeutro . "</p>";
 
 
 
 
 ?>
+
+
+<?php include __DIR__ . '/../../partials/metaHead.php'; ?>
+
+    <?php include __DIR__ . '/../../partials/header.php'; ?>
+   
+
+    <main>
+        
+        <div class="d-flex justify-content-center">
+            <img src="../../assets/img/gruppo.jpg" alt="">
+        </div>
+
+        <div>
+
+            <?php 
+            
+                echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
+                echo "<p>" . $cane -> cane . "</p>";
+                echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                echo "<p>" . $gatto -> gatto . "</p>";
+                echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+            
+            ?>
+
+        </div>
+
+
+    </main>
+
+    
+</body>
+</html>

@@ -62,14 +62,50 @@ $gatto = new Oggettistica('Prodotti Alimentari',
                           'Giochi');
 
 
-echo "<p>" . $prodotti -> oggettistica . "</p>";
-echo "<p>" . $cane -> cane . "</p>";
-echo "<p>" . $prodotti -> collari . "</p>";
-echo "<p>" . $prodotti -> guinsagli . "</p>";
-echo "<p>" . $prodotti -> cucce . "</p>";
-echo "<p>" . $gatto -> gatto . "</p>";
-echo "<p>" . $prodotti -> collari . "</p>";
-echo "<p>" . $prodotti -> guinsagli . "</p>";
-echo "<p>" . $prodotti -> cucce . "</p>";
+// echo "<p>" . $prodotti -> oggettistica . "</p>";
+// echo "<p>" . $cane -> cane . "</p>";
+// echo "<p>" . $prodotti -> collari . "</p>";
+// echo "<p>" . $prodotti -> guinsagli . "</p>";
+// echo "<p>" . $prodotti -> cucce . "</p>";
+// echo "<p>" . $gatto -> gatto . "</p>";
+// echo "<p>" . $prodotti -> collari . "</p>";
+// echo "<p>" . $prodotti -> guinsagli . "</p>";
+// echo "<p>" . $prodotti -> cucce . "</p>";
 
 ?>
+
+<?php include __DIR__ . '/../../partials/metaHead.php'; ?>
+
+<?php include __DIR__ . '/../../partials/header.php'; ?>
+
+
+<main>
+    
+    <div class="d-flex justify-content-center">
+        <img src="../../assets/img/cuccioli.jpg" alt="">
+    </div>
+
+    <div>
+
+        <?php 
+        
+            echo "<p>" . $prodotti -> oggettistica . "</p>";
+            echo "<p>" . $cane -> cane . "</p>";
+            echo "<p>" . $prodotti -> collari . "</p>";
+            echo "<p>" . $prodotti -> guinsagli . "</p>";
+            echo "<p>" . $prodotti -> cucce . "</p>";
+            echo "<p>" . $gatto -> gatto . "</p>";
+            echo "<p>" . $prodotti -> collari . "</p>";
+            echo "<p>" . $prodotti -> guinsagli . "</p>";
+            echo "<p>" . $prodotti -> cucce . "</p>";
+
+        ?>
+
+    </div>
+
+
+</main>
+
+    
+</body>
+</html>
