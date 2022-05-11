@@ -1,9 +1,9 @@
 
 <?php
 
-include __DIR__ . '/../../classi/magazzino.php';
+include __DIR__ . '/../../classi/prodotti.php';
 
-class Prodotti_Medicinali extends Magazzino {
+class Prodotti_Medicinali extends Inventario {
     //spray collari-antipulci shampoo tagliaunghie 
     public $cane;
     public $gatto;

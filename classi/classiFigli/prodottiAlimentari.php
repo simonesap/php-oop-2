@@ -1,8 +1,12 @@
+<?php 
+
+include __DIR__ . '/../../classi/prodotti.php';
+
+?>
+
 <?php
 
-include __DIR__ . '/../../classi/magazzino.php';
-
-class ProdottiAlimentari extends Magazzino {
+class ProdottiAlimentari extends Inventario {
     //secco umido crocchette patè gusti
     //pesce carne verdura
     public $tipo;
@@ -55,17 +59,17 @@ $prodotto = new Secco('Prodotti Alimentari',
                                  'VEGETALI: <br> Crocchette vegetali');
 
 
-echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
-echo "<p>" . $secco -> tipo . "</p>";
-echo "<p>" . $prodotto -> cane . "</p>";
-echo "<p>" . $prodotto -> carne . "</p>";
-echo "<p>" . $prodotto -> pesce . "</p>";
-echo "<p>" . $prodotto -> verdura . "</p>";
-echo "<p>" . $prodotto -> gatto . "</p>";
-echo "<p>" . $prodotto -> carne . "</p>";
-echo "<p>" . $prodotto -> pesce . "</p>";
-echo "<p>" . $prodotto -> verdura . "</p>";
-// echo "<p>" . $umido -> tipo . "</p>";
+// echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
+// echo "<p>" . $secco -> tipo . "</p>";
+// echo "<p>" . $prodotto -> cane . "</p>";
+// echo "<p>" . $prodotto -> carne . "</p>";
+// echo "<p>" . $prodotto -> pesce . "</p>";
+// echo "<p>" . $prodotto -> verdura . "</p>";
+// echo "<p>" . $prodotto -> gatto . "</p>";
+// echo "<p>" . $prodotto -> carne . "</p>";
+// echo "<p>" . $prodotto -> pesce . "</p>";
+// echo "<p>" . $prodotto -> verdura . "</p>";
+// // echo "<p>" . $umido -> tipo . "</p>";
 
 class Umido extends ProdottiAlimentari {
     //secco umido crocchette patè gusti
@@ -100,14 +104,80 @@ $prodotto = new Umido('Prodotti Alimentari',
                                  'VEGETALI: <br> Patè vegetali');
 
 
-echo "<p>" . $umido -> tipo . "</p>";
-echo "<p>" . $prodotto -> cane . "</p>";
-echo "<p>" . $prodotto -> carne . "</p>";
-echo "<p>" . $prodotto -> pesce . "</p>";
-echo "<p>" . $prodotto -> verdura . "</p>";
-echo "<p>" . $prodotto -> gatto . "</p>";
-echo "<p>" . $prodotto -> carne . "</p>";
-echo "<p>" . $prodotto -> pesce . "</p>";
-echo "<p>" . $prodotto -> verdura . "</p>";
+// echo "<p>" . $umido -> tipo . "</p>";
+// echo "<p>" . $prodotto -> cane . "</p>";
+// echo "<p>" . $prodotto -> carne . "</p>";
+// echo "<p>" . $prodotto -> pesce . "</p>";
+// echo "<p>" . $prodotto -> verdura . "</p>";
+// echo "<p>" . $prodotto -> gatto . "</p>";
+// echo "<p>" . $prodotto -> carne . "</p>";
+// echo "<p>" . $prodotto -> pesce . "</p>";
+// echo "<p>" . $prodotto -> verdura . "</p>";
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Animalista.it</title>
+</head>
+<body>
+
+   
+
+    <main>
+        
+        <?php
+
+            include __DIR__ . '/./oggettistica.php';
+            include __DIR__ . '/./prodottiMedicinali.php';
+
+        ?>
+        <div>
+
+            <?php 
+            
+                echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
+                echo "<p>" . $secco -> tipo . "</p>";
+                echo "<p>" . $prodotto -> cane . "</p>";
+                echo "<p>" . $prodotto -> carne . "</p>";
+                echo "<p>" . $prodotto -> pesce . "</p>";
+                echo "<p>" . $prodotto -> verdura . "</p>";
+                echo "<p>" . $prodotto -> gatto . "</p>";
+                echo "<p>" . $prodotto -> carne . "</p>";
+                echo "<p>" . $prodotto -> pesce . "</p>";
+                echo "<p>" . $prodotto -> verdura . "</p>";
+            
+            ?>
+
+        </div>
+
+        <div>
+
+            <?php 
+            
+                echo "<p>" . $umido -> tipo . "</p>";
+                echo "<p>" . $prodotto -> cane . "</p>";
+                echo "<p>" . $prodotto -> carne . "</p>";
+                echo "<p>" . $prodotto -> pesce . "</p>";
+                echo "<p>" . $prodotto -> verdura . "</p>";
+                echo "<p>" . $prodotto -> gatto . "</p>";
+                echo "<p>" . $prodotto -> carne . "</p>";
+                echo "<p>" . $prodotto -> pesce . "</p>";
+                echo "<p>" . $prodotto -> verdura . "</p>";
+                
+            
+            ?>
+
+        </div>
+        
+
+    </main>
+
+    
+</body>
+</html>

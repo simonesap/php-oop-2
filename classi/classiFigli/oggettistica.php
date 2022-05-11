@@ -1,8 +1,8 @@
 <?php
 
-include __DIR__ . '/../../classi/magazzino.php';
+include __DIR__ . '/../../classi/prodotti.php';
 
-class Oggettistica extends Magazzino {
+class Oggettistica extends Inventario {
     //trasportini cucce giochi guinsagli
     public $cane;
     public $gatto;

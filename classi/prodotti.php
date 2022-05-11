@@ -1,6 +1,6 @@
 <?php
 
-class Magazzino {
+class Inventario {
     public $prodottiAlimentari;
     public $oggettistica;
     public $prodottiMedicinali;
@@ -17,7 +17,7 @@ class Magazzino {
 
 }
 
-$prodotti = new Magazzino('Prodotti Alimentari', 'Oggettistica', 'Prodotti medicinali');
+$prodotti = new Inventario('Prodotti Alimentari', 'Oggettistica', 'Prodotti medicinali');
 
 
 // echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
