@@ -17,7 +17,9 @@ class Utente {
     public $email;
     // public $livello;
 
-    public function __construct($_nome,$_cognome,$_compleanno,$_indirizzo,$_email){
+    public function __construct($_livello, $_nome,$_cognome,$_compleanno,$_indirizzo,$_email){
+        $this -> setLivello($_livello);
+        // $this -> setSconto($_sconto);
         $this -> setNome($_nome);
         $this -> setCognome($_cognome);
         $this -> setCompleanno($_compleanno);
@@ -85,14 +87,30 @@ class Utente {
 
 }
 
-$account = new Utente('Marco', 'Marchetti', '11-05-2000', 'Via Garibaldi', 'marco@email.it');
-
-echo $account -> getNome() . '<br>';
-echo $account -> getCognome() . '<br>';
-echo $account -> getCompleanno() . '<br>';
-echo $account -> getIndirizzo() . '<br>';
-echo $account -> getEmail() . '<br>';
-echo $account -> getLivello() . '<br>';
-echo $account -> getSconto() . '<br>';
+$account = new Utente('1', 'Marco', 'Marchetti', '11-05-2000', 'Via Garibaldi', 'marco@email.it');
 
 ?>
+
+<?php include __DIR__ . '/../partials/metaHead.php'; ?>
+
+<?php include __DIR__ . '/../partials/header.php'; ?>
+
+<div>
+
+    <!-- <div class="align-self-start mt-5 me-2"> 
+        <button class="btn btn-primary">Impostazioni utente</button>
+    </div> -->
+    <div id="hov" class="">
+
+        <p><span style="color: blue">Nome utente: </span><?php echo $account -> getNome() . '<br>'; ?> </p>
+        <p><span style="color: blue">Cognome utente: </span><?php echo $account -> getCognome() . '<br>'; ?> </p>
+        <p><span style="color: blue">Data di nascita: </span><?php echo $account -> getCompleanno() . '<br>'; ?> </p>
+        <p><span style="color: blue">Indirizzo: </span><?php echo $account -> getIndirizzo() . '<br>'; ?> </p>
+        <p><span style="color: blue">Indirizzo email: </span><?php echo $account -> getEmail() . '<br>'; ?> </p>
+        <p><span style="color: blue">Livello utente: </span><?php echo $account -> getLivello() . '<br>'; ?> </p>
+        <p><span style="color: blue">Sconto primo livello: </span><?php echo $account -> getSconto() . '% <br>'; ?> </p>
+        
+    </div>
+
+</div> 
+

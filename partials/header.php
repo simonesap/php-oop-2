@@ -44,6 +44,11 @@
                         Carrello
                     </a> 
                 </li>
+                <!-- <li class="m-3"> 
+                    <a class="text-decoration-none text-dark fs-3" href="http://localhost/php-oop-2/classi/utente.php">
+                        Impostazione utente
+                    </a> 
+                </li> -->
             </ul>
         </nav>
     </div>

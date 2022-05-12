@@ -12,6 +12,10 @@
 
 <?php include __DIR__ . '/./partials/header.php'; ?>
 
+<div class="d-flex justify-content-center">
+    <img src="./assets/img/cani-e-gatti.jpg" alt="">
+</div>
+
     
 </body>
 </html>

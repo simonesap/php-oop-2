@@ -4,8 +4,8 @@ trait Livello {
 
     public $livello;
     
-    public function setLivello() {
-        $this -> livello = $livello;
+    public function setLivello($_livello) {
+        $this -> livello = $_livello;
     }
     
 }

@@ -7,3 +7,10 @@
     --gray-500: $gray-500;
 }
 
+.d_n {
+    display: none;
+}
+
+#hov:hover {
+    display: inline-block !important;
+}
