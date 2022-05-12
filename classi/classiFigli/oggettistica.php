@@ -10,6 +10,8 @@ class Oggettistica extends Inventario {
     public $guinsagli;
     public $cucce;
     public $giochi;
+    public $prezzo;
+
 
     public function __construct($_prodottiAlimentari, 
                                 $_oggettistica, 
@@ -19,7 +21,8 @@ class Oggettistica extends Inventario {
                                 $_collari, 
                                 $_guinsagli, 
                                 $_cucce,
-                                $_giochi) {
+                                $_giochi,
+                                $_prezzo) {
         parent::__construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali);
         $this -> cane = $_cane;
         $this -> gatto = $_gatto;
@@ -27,6 +30,7 @@ class Oggettistica extends Inventario {
         $this -> guinsagli = $_guinsagli;
         $this -> cucce = $_cucce;
         $this -> giochi = $_giochi;
+        $this -> prezzo = $_prezzo;
     }
     
 }
@@ -39,7 +43,8 @@ $prodotti = new Oggettistica('Prodotti Alimentari',
                              'Collari',
                              'Guinsagli',
                              'Cucce',
-                             'Giochi');
+                             'Giochi',
+                              10);
 
 $cane = new Oggettistica('Prodotti Alimentari', 
                           'Oggettistica', 
@@ -49,7 +54,8 @@ $cane = new Oggettistica('Prodotti Alimentari',
                           'Collari',
                           'Guinsagli',
                           'Cucce',
-                          'Giochi');
+                          'Giochi',
+                           10);
 
 $gatto = new Oggettistica('Prodotti Alimentari', 
                           'Oggettistica', 
@@ -59,18 +65,9 @@ $gatto = new Oggettistica('Prodotti Alimentari',
                           'Collari',
                           'Guinsagli',
                           'Cucce',
-                          'Giochi');
+                          'Giochi',
+                           10);
 
-
-// echo "<p>" . $prodotti -> oggettistica . "</p>";
-// echo "<p>" . $cane -> cane . "</p>";
-// echo "<p>" . $prodotti -> collari . "</p>";
-// echo "<p>" . $prodotti -> guinsagli . "</p>";
-// echo "<p>" . $prodotti -> cucce . "</p>";
-// echo "<p>" . $gatto -> gatto . "</p>";
-// echo "<p>" . $prodotti -> collari . "</p>";
-// echo "<p>" . $prodotti -> guinsagli . "</p>";
-// echo "<p>" . $prodotti -> cucce . "</p>";
 
 ?>
 
@@ -92,12 +89,18 @@ $gatto = new Oggettistica('Prodotti Alimentari',
             echo "<p>" . $prodotti -> oggettistica . "</p>";
             echo "<p>" . $cane -> cane . "</p>";
             echo "<p>" . $prodotti -> collari . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
             echo "<p>" . $prodotti -> guinsagli . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
             echo "<p>" . $prodotti -> cucce . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
             echo "<p>" . $gatto -> gatto . "</p>";
             echo "<p>" . $prodotti -> collari . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
             echo "<p>" . $prodotti -> guinsagli . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
             echo "<p>" . $prodotti -> cucce . "</p>";
+            echo "<p>" . $prodotti -> prezzo . "</p>";
 
         ?>
 

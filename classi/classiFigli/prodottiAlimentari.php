@@ -34,21 +34,24 @@ class Secco extends ProdottiAlimentari {
     public $carne;
     public $pesce;
     public $verdura;
+    public $prezzo;
+    
     
 
 
-    public function __construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali, $_tipo, $_cane, $_gatto, $_carne, $_pesce, $_verdura ) {
+    public function __construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali, $_tipo, $_cane, $_gatto, $_carne, $_pesce, $_verdura, $_prezzo ) {
         parent::__construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali, $_tipo);
         $this -> cane = $_cane;
         $this -> gatto = $_gatto;
         $this -> carne = $_carne;
         $this -> pesce = $_pesce;
         $this -> verdura = $_verdura;
+        $this -> prezzo = $_prezzo;
     }
 
 }
 
-$prodotto = new Secco('Prodotti Alimentari',
+$secco = new Secco('Prodotti Alimentari',
                                  'Oggettistica',
                                  'Prodotti medicinali',
                                  '----------SECCO----------',
@@ -56,20 +59,9 @@ $prodotto = new Secco('Prodotti Alimentari',
                                  '----------Gatto----------',
                                  'CARNE: <br> Crocchette di manzo - Crocchette al maiale',
                                  'PESCE: <br> Crocchette al salmone - Crocchette al tonno',
-                                 'VEGETALI: <br> Crocchette vegetali');
+                                 'VEGETALI: <br> Crocchette vegetali',
+                                  40);
 
-
-// echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
-// echo "<p>" . $secco -> tipo . "</p>";
-// echo "<p>" . $prodotto -> cane . "</p>";
-// echo "<p>" . $prodotto -> carne . "</p>";
-// echo "<p>" . $prodotto -> pesce . "</p>";
-// echo "<p>" . $prodotto -> verdura . "</p>";
-// echo "<p>" . $prodotto -> gatto . "</p>";
-// echo "<p>" . $prodotto -> carne . "</p>";
-// echo "<p>" . $prodotto -> pesce . "</p>";
-// echo "<p>" . $prodotto -> verdura . "</p>";
-// // echo "<p>" . $umido -> tipo . "</p>";
 
 class Umido extends ProdottiAlimentari {
     //secco umido crocchette patè gusti
@@ -79,21 +71,32 @@ class Umido extends ProdottiAlimentari {
     public $carne;
     public $pesce;
     public $verdura;
+    public $prezzo;
     
 
 
-    public function __construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali, $_tipo, $_cane, $_gatto, $_carne, $_pesce, $_verdura ) {
+    public function __construct($_prodottiAlimentari, 
+                                $_oggettistica, 
+                                $_prodottiMedicinali, 
+                                $_tipo, 
+                                $_cane, 
+                                $_gatto, 
+                                $_carne, 
+                                $_pesce, 
+                                $_verdura, 
+                                $_prezzo) {
         parent::__construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali, $_tipo);
         $this -> cane = $_cane;
         $this -> gatto = $_gatto;
         $this -> carne = $_carne;
         $this -> pesce = $_pesce;
         $this -> verdura = $_verdura;
+        $this -> prezzo = $_prezzo;
     }
 
 }
 
-$prodotto = new Umido('Prodotti Alimentari',
+$umido = new Umido('Prodotti Alimentari',
                                  'Oggettistica',
                                  'Prodotti medicinali',
                                  '----------UMIDO----------',
@@ -101,18 +104,9 @@ $prodotto = new Umido('Prodotti Alimentari',
                                  '----------Gatto----------',
                                  'CARNE: <br> Patè di manzo - Patè di maiale',
                                  'PESCE: <br>Patè di salmone - Patè di tonno',
-                                 'VEGETALI: <br> Patè vegetali');
+                                 'VEGETALI: <br> Patè vegetali',
+                                  10);
 
-
-// echo "<p>" . $umido -> tipo . "</p>";
-// echo "<p>" . $prodotto -> cane . "</p>";
-// echo "<p>" . $prodotto -> carne . "</p>";
-// echo "<p>" . $prodotto -> pesce . "</p>";
-// echo "<p>" . $prodotto -> verdura . "</p>";
-// echo "<p>" . $prodotto -> gatto . "</p>";
-// echo "<p>" . $prodotto -> carne . "</p>";
-// echo "<p>" . $prodotto -> pesce . "</p>";
-// echo "<p>" . $prodotto -> verdura . "</p>";
 
 ?>
 
@@ -133,14 +127,20 @@ $prodotto = new Umido('Prodotti Alimentari',
             
                 echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
                 echo "<p>" . $secco -> tipo . "</p>";
-                echo "<p>" . $prodotto -> cane . "</p>";
-                echo "<p>" . $prodotto -> carne . "</p>";
-                echo "<p>" . $prodotto -> pesce . "</p>";
-                echo "<p>" . $prodotto -> verdura . "</p>";
-                echo "<p>" . $prodotto -> gatto . "</p>";
-                echo "<p>" . $prodotto -> carne . "</p>";
-                echo "<p>" . $prodotto -> pesce . "</p>";
-                echo "<p>" . $prodotto -> verdura . "</p>";
+                echo "<p>" . $secco -> cane . "</p>";
+                echo "<p>" . $secco -> carne . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
+                echo "<p>" . $secco -> pesce . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
+                echo "<p>" . $secco -> verdura . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
+                echo "<p>" . $secco -> gatto . "</p>";
+                echo "<p>" . $secco -> carne . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
+                echo "<p>" . $secco -> pesce . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
+                echo "<p>" . $secco -> verdura . "</p>";
+                echo "<p>" . $secco -> prezzo . "</p>";
             
             ?>
 
@@ -151,14 +151,20 @@ $prodotto = new Umido('Prodotti Alimentari',
             <?php 
             
                 echo "<p>" . $umido -> tipo . "</p>";
-                echo "<p>" . $prodotto -> cane . "</p>";
-                echo "<p>" . $prodotto -> carne . "</p>";
-                echo "<p>" . $prodotto -> pesce . "</p>";
-                echo "<p>" . $prodotto -> verdura . "</p>";
-                echo "<p>" . $prodotto -> gatto . "</p>";
-                echo "<p>" . $prodotto -> carne . "</p>";
-                echo "<p>" . $prodotto -> pesce . "</p>";
-                echo "<p>" . $prodotto -> verdura . "</p>";
+                echo "<p>" . $umido -> cane . "</p>";
+                echo "<p>" . $umido -> carne . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
+                echo "<p>" . $umido -> pesce . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
+                echo "<p>" . $umido -> verdura . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
+                echo "<p>" . $umido -> gatto . "</p>";
+                echo "<p>" . $umido -> carne . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
+                echo "<p>" . $umido -> pesce . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
+                echo "<p>" . $umido -> verdura . "</p>";
+                echo "<p>" . $umido -> prezzo . "</p>";
                 
             
             ?>

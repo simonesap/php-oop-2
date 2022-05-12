@@ -10,6 +10,7 @@ class Prodotti_Medicinali extends Inventario {
     public $collareAntipulci;
     public $sprayAntipulci;
     public $shampooNeutro;
+    public $prezzo;
 
     public function __construct($_prodottiAlimentari, 
                                 $_oggettistica, 
@@ -18,13 +19,15 @@ class Prodotti_Medicinali extends Inventario {
                                 $_gatto, 
                                 $_collareAntipulci, 
                                 $_sprayAntipulci, 
-                                $_shampooNeutro) {
+                                $_shampooNeutro,
+                                $_prezzo) {
         parent::__construct($_prodottiAlimentari, $_oggettistica, $_prodottiMedicinali);
         $this -> cane = $_cane;
         $this -> gatto = $_gatto;
         $this -> collareAntipulci = $_collareAntipulci;
         $this -> sprayAntipulci = $_sprayAntipulci;
         $this -> shampooNeutro = $_shampooNeutro;
+        $this -> prezzo = $_prezzo;
 
     }
 
@@ -37,7 +40,8 @@ $prodotti = new Prodotti_Medicinali('Prodotti Alimentari',
                                     '----------Gatto----------',
                                     'Collare antipulci',
                                     'Spray antipulci',
-                                    'Shampoo neutro');
+                                    'Shampoo neutro',
+                                     10);
 $cane = new Prodotti_Medicinali('Prodotti Alimentari', 
                                 'Oggettistica', 
                                 'Prodotti medicinali', 
@@ -45,7 +49,8 @@ $cane = new Prodotti_Medicinali('Prodotti Alimentari',
                                 '----------Gatto----------',
                                 'Collare antipulci',
                                 'Spray antipulci',
-                                'Shampoo neutro');
+                                'Shampoo neutro',
+                                 10);
 $gatto = new Prodotti_Medicinali('Prodotti Alimentari', 
                                  'Oggettistica', 
                                  'Prodotti medicinali', 
@@ -53,17 +58,8 @@ $gatto = new Prodotti_Medicinali('Prodotti Alimentari',
                                  '----------Gatto----------',
                                  'Collare antipulci',
                                  'Spray antipulci',
-                                 'Shampoo neutro');
-
-// echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
-// echo "<p>" . $cane -> cane . "</p>";
-// echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-// echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-// echo "<p>" . $prodotti -> shampooNeutro . "</p>";
-// echo "<p>" . $gatto -> gatto . "</p>";
-// echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-// echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-// echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                                 'Shampoo neutro',
+                                  10);
 
 
 
@@ -89,12 +85,18 @@ $gatto = new Prodotti_Medicinali('Prodotti Alimentari',
                 echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
                 echo "<p>" . $cane -> cane . "</p>";
                 echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
                 echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
                 echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
                 echo "<p>" . $gatto -> gatto . "</p>";
                 echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
                 echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
                 echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                echo "<p>" . $prodotti -> prezzo . "</p>";
             
             ?>
 

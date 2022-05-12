@@ -1,0 +1,9 @@
+.carlino {
+    width: 50px;
+    height: 5px;
+}
+
+:root{
+    --gray-500: $gray-500;
+}
+
