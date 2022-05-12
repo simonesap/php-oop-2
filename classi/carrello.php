@@ -1,23 +1,17 @@
 
 
+<?php include __DIR__ . '/../classi/cartaDiCredito.php'; ?>
 
+<?php include __DIR__ . '/./utente.php'; ?>
 
+<?php include __DIR__ . '/../classi/prodotti.php'; ?>
     
-
-        <?php include __DIR__ . '/../classi/cartaDiCredito.php'; ?>
-
-        <?php include __DIR__ . '/./utente.php'; ?>
-
-    <?php include __DIR__ . '/../classi/prodotti.php'; ?>
-    
-        <?php include __DIR__ . '/.././traits/prezzi.php'; ?>
+<?php include __DIR__ . '/.././traits/prezzi.php'; ?>
 
 
 <?php
 
 $carta1 = new Carta ('Marco', 'Marchetti', '05', '2030', 'IT1234568789');
-
-var_dump( $carta1 -> scadenzaCarta() );
 
 class PrezzoFinale {
 
@@ -100,37 +94,65 @@ $costo = new PrezzoFinale(40, 40, 15, 10, 4);
 
 
 ?>
-
-<div>
-    <span style="color: blue">Prezzo patè per cani: </span>
-    <?php echo  $costo -> getPrezzoSeccoDog(); ?>
+<div class="d-flex justify-content-center">
+    <div>
+        <h1 style="color: green">Pagamento</h1>
+    </div>
 </div>
-<!-- <div>
-    <span style="color: blue">Livello utente: </span>
-    
-</div> -->
-<!--
-<div>
-    <span style="color: blue">Iban: </span>
-    
-</div> -->
 
+<div class="container d-flex justify-content-between">
+    <div class="m-5">
+        <h2 class="mb-5">Info utente registrato</h2>
+            <!-- <div class="align-self-start mt-5 me-2"> 
+                <button class="btn btn-primary">Impostazioni utente</button>
+            </div> -->
+        <div id="hov" class="">
 
+            <p><span style="color: blue">Nome utente: </span><?php echo $account -> getNome() . '<br>'; ?> </p>
+            <p><span style="color: blue">Cognome utente: </span><?php echo $account -> getCognome() . '<br>'; ?> </p>
+            <p><span style="color: blue">Data di nascita: </span><?php echo $account -> getCompleanno() . '<br>'; ?> </p>
+            <p><span style="color: blue">Indirizzo: </span><?php echo $account -> getIndirizzo() . '<br>'; ?> </p>
+            <p><span style="color: blue">Indirizzo email: </span><?php echo $account -> getEmail() . '<br>'; ?> </p>
+            <p><span style="color: blue">Livello utente: </span><?php echo $account -> getLivello() . '<br>'; ?> </p>
+            <p><span style="color: blue">Sconto primo livello: </span><?php echo $account -> getSconto() . '% <br>'; ?> </p>
+            <?php var_dump( $carta1 -> scadenzaCarta() ); ?>
+            
+        </div>
 
-<div>
-    <div>
-        <span style="color: blue">Intestatario carta: </span>
-        <?php echo $carta1 -> nome; ?>
-        <?php  echo $carta1 -> cognome . '<br>'; ?>
+        <div>
+            <span style="color: blue">Prezzo patè per cani: </span>
+            <?php echo  $costo -> getPrezzoUmidoCane(); ?>
+        </div>
     </div>
-    <div>
-        <span style="color: blue">Data di scadenza carta: </span>
-        <?php echo $carta1 -> meseScadenza . '/'; ?>
-        <?php  echo $carta1 -> annoScadenza . '<br>'; ?>
+
+    <div class="m-5">
+        <h2 class="mb-5">Info carta inserita</h2>
+        <div>
+            <span style="color: blue">Intestatario carta: </span>
+            <?php echo $carta1 -> nome; ?>
+            <?php  echo $carta1 -> cognome . '<br>'; ?>
+        </div>
+        <div>
+            <span style="color: blue">Data di scadenza carta: </span>
+            <?php echo $carta1 -> meseScadenza . '/'; ?>
+            <?php  echo $carta1 -> annoScadenza . '<br>'; ?>
+        </div>
+        <div>
+            <span style="color: blue">Iban: </span>
+            <?php echo $carta1 -> numero . '<br>'; ?>
+        </div>
     </div>
-    <div>
-        <span style="color: blue">Iban: </span>
-        <?php echo $carta1 -> numero . '<br>'; ?>
+
+    <div class="m-5">
+        <h2 class="mb-5">Scontrino</h2>
+        <?php echo  $costo -> getPrezzoSeccoDog(); ?>
+        <p>
+            <span style="color: blue">Prodotti nel carrello: </span>
+            <?php echo  $costo -> getQuantita(); ?>
+            <?php echo  $costo -> getPrezzoSeccoDog(); ?>
+        </p>
+        
     </div>
 
 </div>
+

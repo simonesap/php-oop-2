@@ -96,21 +96,8 @@ $account = new Utente('1', 'Marco', 'Marchetti', '11-05-2000', 'Via Garibaldi', 
 <?php include __DIR__ . '/../partials/header.php'; ?>
 
 <div>
-
-    <!-- <div class="align-self-start mt-5 me-2"> 
-        <button class="btn btn-primary">Impostazioni utente</button>
-    </div> -->
-    <div id="hov" class="">
-
-        <p><span style="color: blue">Nome utente: </span><?php echo $account -> getNome() . '<br>'; ?> </p>
-        <p><span style="color: blue">Cognome utente: </span><?php echo $account -> getCognome() . '<br>'; ?> </p>
-        <p><span style="color: blue">Data di nascita: </span><?php echo $account -> getCompleanno() . '<br>'; ?> </p>
-        <p><span style="color: blue">Indirizzo: </span><?php echo $account -> getIndirizzo() . '<br>'; ?> </p>
-        <p><span style="color: blue">Indirizzo email: </span><?php echo $account -> getEmail() . '<br>'; ?> </p>
-        <p><span style="color: blue">Livello utente: </span><?php echo $account -> getLivello() . '<br>'; ?> </p>
-        <p><span style="color: blue">Sconto primo livello: </span><?php echo $account -> getSconto() . '% <br>'; ?> </p>
-        
-    </div>
+    
+    
 
 </div> 
 
