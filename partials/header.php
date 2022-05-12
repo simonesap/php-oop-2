@@ -45,6 +45,8 @@
     
 
     <div class="align-self-start mt-5 me-2"> 
+        <?php include __DIR__ . '/../traits/sconto.php'; ?>
+        <?php ?>
         <button class="btn btn-primary">Accedi</button>
         <button class="btn btn-primary">Cera account</button>
     </div>
