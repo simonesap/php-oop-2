@@ -121,56 +121,56 @@ $umido = new Umido('Prodotti Alimentari',
             <img src="../../assets/img/caneGatto.png" alt="">
         </div>
     
-        <div>
+        <div class="container">
 
-            <?php 
-            
-                echo "<p>" . $prodotti -> prodottiAlimentari . "</p>";
-                echo "<p>" . $secco -> tipo . "</p>";
-                echo "<p>" . $secco -> cane . "</p>";
-                echo "<p>" . $secco -> carne . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-                echo "<p>" . $secco -> pesce . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-                echo "<p>" . $secco -> verdura . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-                echo "<p>" . $secco -> gatto . "</p>";
-                echo "<p>" . $secco -> carne . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-                echo "<p>" . $secco -> pesce . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-                echo "<p>" . $secco -> verdura . "</p>";
-                echo "<p>" . $secco -> prezzo . "</p>";
-            
-            ?>
+            <h1 class="d-flex justify-content-center text-danger ">
+                <?php echo "<p>" . $prodotti -> prodottiAlimentari . "</p>"; ?>
+            </h1>
 
-        </div>
-
-        <div>
-
-            <?php 
-            
-                echo "<p>" . $umido -> tipo . "</p>";
-                echo "<p>" . $umido -> cane . "</p>";
-                echo "<p>" . $umido -> carne . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
-                echo "<p>" . $umido -> pesce . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
-                echo "<p>" . $umido -> verdura . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
-                echo "<p>" . $umido -> gatto . "</p>";
-                echo "<p>" . $umido -> carne . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
-                echo "<p>" . $umido -> pesce . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
-                echo "<p>" . $umido -> verdura . "</p>";
-                echo "<p>" . $umido -> prezzo . "</p>";
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $secco -> tipo . "</p>"; ?>
+                    </h2>
+                    <p> <?php echo "<p>" . $secco -> cane . "</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> carne . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> pesce . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> verdura . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> gatto . "</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> carne . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> pesce . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $secco -> verdura . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $secco -> prezzo . " Euro</p>"; ?> </p>
+                </div>
                 
-            
-            ?>
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $umido -> tipo . "</p>"; ?>
+                    </h2>
+                    <p> <?php echo "<p>" . $umido -> cane . "</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> carne . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> pesce . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> verdura . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> gatto . "</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> carne . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> pesce . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                    <p> <?php echo "<p>" . $umido -> verdura . "</p>"; ?> </p>
+                    <p> <?php echo "<p> Prezzo: " . $umido -> prezzo . " Euro</p>"; ?> </p>
+                </div>
+                
+            </div>
 
         </div>
-        
 
     </main>
 

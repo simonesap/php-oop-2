@@ -1,25 +1,29 @@
 <?php include __DIR__ . '/../traits/sconto.php'; ?>
 
+<?php include __DIR__ . '/../traits/livello.php'; ?>
+
 <?php
 
 class Utente {
 
     use Sconto;
-    
-    protected $nome;
-    protected $cognome;
-    protected $compleanno;
-    protected $indirizzo;
-    protected $email;
-    protected $livello;
 
-    public function __construct($_nome,$_cognome,$_compleanno,$_indirizzo,$_email, $_livello){
+    use Livello;
+    
+    public $nome;
+    public $cognome;
+    public $compleanno;
+    public $indirizzo;
+    public $email;
+    // public $livello;
+
+    public function __construct($_nome,$_cognome,$_compleanno,$_indirizzo,$_email){
         $this -> setNome($_nome);
         $this -> setCognome($_cognome);
         $this -> setCompleanno($_compleanno);
         $this -> setIndirizzo($_indirizzo);
         $this -> setEmail($_email);
-        $this -> setLivello($_livello);
+        // $this -> setLivello($_livello);
     }
 
     //Setter
@@ -43,9 +47,9 @@ class Utente {
         $this -> email = $_email;
     }
 
-    public function setLivello($_livello) {
-        $this -> livello = $_livello;
-    }
+    // public function setLivello($_livello) {
+    //     $this -> livello = $_livello;
+    // }
 
     //Getter
     public function getNome() {
@@ -69,6 +73,7 @@ class Utente {
     }
 
     public function getLivello() {
+        $this -> livello == 1;
         return $this -> livello;
     }
 
@@ -80,7 +85,7 @@ class Utente {
 
 }
 
-$account = new Utente('Marco', 'Marchetti', '11-05-2000', 'Via Garibaldi', 'marco@email.it', 1);
+$account = new Utente('Marco', 'Marchetti', '11-05-2000', 'Via Garibaldi', 'marco@email.it');
 
 echo $account -> getNome() . '<br>';
 echo $account -> getCognome() . '<br>';
@@ -89,7 +94,5 @@ echo $account -> getIndirizzo() . '<br>';
 echo $account -> getEmail() . '<br>';
 echo $account -> getLivello() . '<br>';
 echo $account -> getSconto() . '<br>';
-
-
 
 ?>

@@ -39,14 +39,17 @@
                         Prodotti medicinali
                     </a> 
                 </li>
+                <li class="m-3"> 
+                    <a class="text-decoration-none text-dark fs-3" href="http://localhost/php-oop-2/classi/carrello.php">
+                        Carrello
+                    </a> 
+                </li>
             </ul>
         </nav>
     </div>
     
 
     <div class="align-self-start mt-5 me-2"> 
-        <?php include __DIR__ . '/../traits/sconto.php'; ?>
-        <?php ?>
         <button class="btn btn-primary">Accedi</button>
         <button class="btn btn-primary">Cera account</button>
     </div>
