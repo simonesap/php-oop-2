@@ -1,7 +1,4 @@
 
-
-
-
 <?php include __DIR__ . '/./utente.php'; ?>
 
 <?php include __DIR__ . '/../classi/prodotti.php'; ?>
@@ -22,6 +19,7 @@ class PrezzoFinale {
     use Carta;
 
     public $quantitaProdotto;
+    public $prezzoTotale;
 
     public function __construct($_prezzoSeccoCane, 
                                 $_prezzoSeccoGatto, 
@@ -42,6 +40,7 @@ class PrezzoFinale {
         $this -> nome = $_nome;
         $this -> cognome = $_cognome;
         $this -> meseScadenza = $_meseScadenza;
+        $this -> annoScadenza = $_annoScadenza;
         $this -> numero = $_numero;
         $this -> quantitaProdotto = $_quantitaProdotto;
     }
@@ -54,55 +53,25 @@ class PrezzoFinale {
         return $this -> quantitaProdotto;
     }
 
+    public function setPrezzoTotale() {
+        $this -> PrezzoTotale = $PrezzoTotale;
+    }
+
+    public function getPrezzoTotale() {
+        return $this -> PrezzoTotale;
+    }
+
     public function getSconto2() {
         if( $this -> livello == 1) {
             return $this -> sconto = 20;
         }
     }
 
-    // //Setter
-    // public function setPrezzoSeccoCane() {
-    //     $this -> prezzoSeccoCane = $_prezzoSeccoCane;
-    //     return $this -> prezzoSeccoCane;
-    // }
-
-    // public function setPrezzoSeccoGatto() {
-    //     $this -> prezzoSeccoGatto = $_prezzoSeccoGatto;
-    //     return $this -> prezzoSeccoGatto;
-    // }
-
-    // public function setPrezzoUmidoCane() {
-    //     $this -> prezzoUmidoCane = $_prezzoUmidoCane;
-    //     return $this -> prezzoUmidoCane;
-    // }
-    
-    // public function setPrezzoUmidoGatto() {
-    //     $this -> prezzoUmidoGatto = $_prezzoUmidoGatto;
-    //     return $this -> prezzoUmidoGatto;
-    // }
-
-    // //Getter
-    // public function getPrezzoSeccoCane() {
-    //     return $this -> prezzoSeccoCane;
-    // }
-
-    // public function getPrezzoSeccoGatto() {
-    //     return $this -> prezzoSeccoGatto;
-    // }
-
-    // public function getPrezzoUmidoCane() {
-    //     return $this -> prezzoUmidoCane;
-    // }
-    
-    // public function getPrezzoUmidoGatto() {
-    //     return $this -> prezzoUmidoGatto;
-    // }
-
     public function getPrezzoSeccoDog() {
-        if( $this -> livello == 1 && $costo -> scadenzaCarta() == true ) {
+        if( $this -> livello == 1 && $this -> scadenzaCarta() == true ) {
             
-            $prezzoFinale = getPrezzoSeccoCane() * getQuantita();
-            return $this -> prezzoFinale;
+            $prezzoTotale = $this -> getPrezzoSeccoCane() * $this -> getQuantita();
+            return $this -> prezzoTotale;
         }
     }
 
@@ -169,10 +138,12 @@ $costo = new PrezzoFinale(40, 40, 15, 10, 1, 'Marco', 'Marchetti', '05', '2000',
 
     <div class="m-5">
         <h2 class="mb-5">Ticket</h2>
-        <?php echo  $costo -> getPrezzoSeccoDog(); ?>
         <p>
             <span style="color: blue">Prodotti nel carrello: </span>
             <?php echo  $costo -> getQuantita(); ?>
+        </p>
+        <p>
+            <span style="color: blue">Totale da pagare: </span>
             <?php echo  $costo -> getPrezzoSeccoDog(); ?>
         </p>
         

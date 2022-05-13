@@ -9,8 +9,6 @@ trait Carta {
     public $meseScadenza;
     public $annoScadenza;
     public $numero;
-    // public $quantità;
-    // public $prezzoTotale;
 
     //Costruttore
     public function __construct($_nome, $_cognome, $_meseScadenza, $_annoScadenza, $_numero) {
@@ -22,12 +20,12 @@ trait Carta {
     }
 
     public function scadenzaCarta() {
-        $scadenza = DateTime::createFromFormat( 'm-Y', $this -> meseScadenza . '-' . $this -> annoScadenza);
+        $scadenza = DateTime::createFromFormat( "m-Y", $this -> meseScadenza . '-' . $this -> annoScadenza);
         $now = new DateTime();
         // var_dump($now);
 
         if( $scadenza < $now) {
-            echo 'La carta è valida.';
+            echo 'La carta è valida!!';
             return true;
         } else {
             return false;
