@@ -2,7 +2,7 @@
 
 <?php
 
-class Carta {
+trait Carta {
 
     use UtenteInfo;
 
@@ -22,11 +22,12 @@ class Carta {
     }
 
     public function scadenzaCarta() {
-        $scadenza = DateTime::createFromFormat( 'm-y', $this -> meseScadenza . '--' . $this -> annoScadenza);
+        $scadenza = DateTime::createFromFormat( 'm-Y', $this -> meseScadenza . '-' . $this -> annoScadenza);
         $now = new DateTime();
+        // var_dump($now);
 
         if( $scadenza < $now) {
-            //carta scaduta
+            echo 'La carta è valida.';
             return true;
         } else {
             return false;
@@ -34,5 +35,7 @@ class Carta {
         }
     }
 }
+
+
 
 ?>

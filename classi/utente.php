@@ -9,6 +9,8 @@ class Utente {
     use Sconto;
 
     use Livello;
+
+    // use UtenteInfo;
     
     public $nome;
     public $cognome;
@@ -25,7 +27,6 @@ class Utente {
         $this -> setCompleanno($_compleanno);
         $this -> setIndirizzo($_indirizzo);
         $this -> setEmail($_email);
-        // $this -> setLivello($_livello);
     }
 
     //Setter
@@ -48,10 +49,6 @@ class Utente {
     public function setEmail($_email) {
         $this -> email = $_email;
     }
-
-    // public function setLivello($_livello) {
-    //     $this -> livello = $_livello;
-    // }
 
     //Getter
     public function getNome() {
