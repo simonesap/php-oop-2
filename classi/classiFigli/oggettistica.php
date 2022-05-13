@@ -82,29 +82,46 @@ $gatto = new Oggettistica('Prodotti Alimentari',
         <img src="../../assets/img/cuccioli.jpg" alt="">
     </div>
 
-    <div>
+    <div class="container">
 
-        <?php 
-        
-            echo "<p>" . $prodotti -> oggettistica . "</p>";
-            echo "<p>" . $cane -> cane . "</p>";
-            echo "<p>" . $prodotti -> collari . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
-            echo "<p>" . $prodotti -> guinsagli . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
-            echo "<p>" . $prodotti -> cucce . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
-            echo "<p>" . $gatto -> gatto . "</p>";
-            echo "<p>" . $prodotti -> collari . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
-            echo "<p>" . $prodotti -> guinsagli . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
-            echo "<p>" . $prodotti -> cucce . "</p>";
-            echo "<p>" . $prodotti -> prezzo . "</p>";
+            <h1 class="d-flex justify-content-center text-danger ">
+                <?php echo "<p>" . $prodotti -> oggettistica . "</p>"; ?>
+            </h1>
 
-        ?>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $cane -> cane . "</p>"; ?>
+                    </h2>
+                    <?php 
+                        echo "<p>" . $prodotti -> collari . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> guinsagli . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> cucce . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        
 
-    </div>
+                    ?>
+                </div>
+
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $gatto -> gatto . "</p>"; ?>
+                    </h2>
+                    <?php 
+                        echo "<p>" . $prodotti -> collari . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> guinsagli . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> cucce . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                    ?>
+                </div>
+                
+            </div>
+
+        </div>
 
 
 </main>

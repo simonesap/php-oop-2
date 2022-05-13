@@ -74,34 +74,46 @@ $gatto = new Prodotti_Medicinali('Prodotti Alimentari',
 
     <main>
         
-        <div class="d-flex justify-content-center">
-            <img src="../../assets/img/gruppo.jpg" alt="">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <img src="../../assets/img/gruppo.jpg" alt="">
+            </div>
+
+            <h1 class="d-flex justify-content-center text-danger ">
+                <?php echo "<p>" . $prodotti -> prodottiMedicinali . "</p>"; ?>
+            </h1>
+
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $cane -> cane . "</p>"; ?>
+                    </h2>
+                    <?php 
+                        echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                    ?>
+                </div>
+
+                <div>
+                    <h2 class="text-primary">
+                        <?php echo "<p>" . $gatto -> gatto . "</p>"; ?>
+                    </h2>
+                    <?php 
+                        echo "<p>" . $prodotti -> collareAntipulci . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                        echo "<p>" . $prodotti -> shampooNeutro . "</p>";
+                        echo "<p>" . $prodotti -> prezzo . " Euro </p>";
+                    ?>
+                </div>
+                    
+            </div>
         </div>
-
-        <div>
-
-            <?php 
-            
-                echo "<p>" . $prodotti -> prodottiMedicinali . "</p>";
-                echo "<p>" . $cane -> cane . "</p>";
-                echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-                echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-                echo "<p>" . $prodotti -> shampooNeutro . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-                echo "<p>" . $gatto -> gatto . "</p>";
-                echo "<p>" . $prodotti -> collareAntipulci . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-                echo "<p>" . $prodotti -> sprayAntipulci . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-                echo "<p>" . $prodotti -> shampooNeutro . "</p>";
-                echo "<p>" . $prodotti -> prezzo . "</p>";
-            
-            ?>
-
-        </div>
-
 
     </main>
 

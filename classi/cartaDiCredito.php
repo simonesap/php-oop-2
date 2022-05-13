@@ -30,6 +30,7 @@ class Carta {
             return true;
         } else {
             return false;
+            throw new Exception('La tua carta non è valida.');
         }
     }
 }

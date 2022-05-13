@@ -86,8 +86,14 @@ class PrezzoFinale {
             //sconto 20%
             $prezzoFinale = getPrezzoSeccoCane() * getQuantita($quantitaProdotto);
             return $this -> prezzoFinale;
-        } 
+        }
     }
+
+    // try{
+    //     echo scadenzaCarta();
+    //     } catch (Exception $e) {
+    //     echo 'La tua carta non è valida. ' . $e->getMessage();
+    //     }
 }
 
 $costo = new PrezzoFinale(40, 40, 15, 10, 4);
@@ -144,7 +150,7 @@ $costo = new PrezzoFinale(40, 40, 15, 10, 4);
     </div>
 
     <div class="m-5">
-        <h2 class="mb-5">Scontrino</h2>
+        <h2 class="mb-5">Ticket</h2>
         <?php echo  $costo -> getPrezzoSeccoDog(); ?>
         <p>
             <span style="color: blue">Prodotti nel carrello: </span>
